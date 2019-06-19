@@ -1,0 +1,16 @@
+version: "3.1"
+
+services:
+  mongo:
+    image: mongo
+    container_name: "mongodb"
+    ports:
+      - 8080:27017
+    environment:
+      MONGO_INITDB_DATABASE: explorerdb
+      MONGO_INITDB_ROOT_USERNAME: xdcashuser
+      MONGO_INITDB_ROOT_PASSWORD: xdcashpwdtobd
+      MONGODB_USER: xdcashuser
+      MONGODB_PASS: xdcashpwdtobd
+    volumes:
+      - ./data/db:/data/db
